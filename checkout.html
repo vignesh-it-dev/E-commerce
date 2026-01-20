@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkout your order at ShopHub">
+    <title>Checkout - ShopHub</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="index.html" class="navbar-logo" aria-label="ShopHub Home">
+                    <span class="logo-text">ShopHub</span>
+                </a>
+
+                <div class="navbar-actions">
+                    <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content checkout-main" role="main">
+        <div class="container">
+            <div class="checkout-layout">
+                <!-- Checkout Form Section -->
+                <section class="checkout-form-section">
+                    <div class="checkout-header">
+                        <a href="index.html" class="back-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                            Back to Shop
+                        </a>
+                        <h1 class="checkout-title">Checkout</h1>
+                    </div>
+
+                    <!-- Shipping Address -->
+                    <div class="checkout-section">
+                        <h2 class="section-title">Shipping Address</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" id="firstName" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" id="lastName" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group form-group-full">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group form-group-full">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="phone" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group form-group-full">
+                                <label for="address" class="form-label">Street Address *</label>
+                                <input type="text" id="address" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="city" class="form-label">City *</label>
+                                <input type="text" id="city" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="state" class="form-label">State *</label>
+                                <input type="text" id="state" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="zipCode" class="form-label">ZIP Code *</label>
+                                <input type="text" id="zipCode" class="form-input" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="country" class="form-label">Country *</label>
+                                <select id="country" class="form-input" required aria-required="true">
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="IN">India</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="checkout-section">
+                        <h2 class="section-title">Payment Method</h2>
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="credit" checked class="payment-radio">
+                                <div class="payment-card">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                                    </svg>
+                                    <span>Credit/Debit Card</span>
+                                </div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="paypal" class="payment-radio">
+                                <div class="payment-card">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M8 12h8M12 8v8"></path>
+                                    </svg>
+                                    <span>PayPal</span>
+                                </div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod" class="payment-radio">
+                                <div class="payment-card">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>Cash on Delivery</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Card Details (shown when credit card is selected) -->
+                        <div class="card-details" id="cardDetails">
+                            <div class="form-group form-group-full">
+                                <label for="cardNumber" class="form-label">Card Number *</label>
+                                <input type="text" id="cardNumber" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                            <div class="form-group">
+                                <label for="expiryDate" class="form-label">Expiry Date *</label>
+                                <input type="text" id="expiryDate" class="form-input" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv" class="form-label">CVV *</label>
+                                <input type="text" id="cvv" class="form-input" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Place Order Button -->
+                    <div class="checkout-actions">
+                        <button class="btn btn-primary btn-large place-order-btn" id="placeOrderBtn">
+                            <span class="btn-text">Place Order</span>
+                            <span class="btn-loader" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Order Summary Section -->
+                <aside class="order-summary-section">
+                    <div class="order-summary-card">
+                        <h2 class="summary-title">Order Summary</h2>
+                        <div class="order-items" id="checkoutItems">
+                            <!-- Order items will be dynamically inserted here -->
+                        </div>
+                        <div class="order-summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="orderSubtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping:</span>
+                                <span id="orderShipping">$10.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax:</span>
+                                <span id="orderTax">$0.00</span>
+                            </div>
+                            <div class="summary-row summary-total">
+                                <span>Total:</span>
+                                <span id="orderTotal">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- JavaScript Files -->
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        // Checkout page specific scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize theme
+            if (typeof initTheme === 'function') {
+                initTheme();
+            }
+
+            // Load cart items for checkout
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const checkoutItemsContainer = document.getElementById('checkoutItems');
+            const orderSubtotalEl = document.getElementById('orderSubtotal');
+            const orderTaxEl = document.getElementById('orderTax');
+            const orderTotalEl = document.getElementById('orderTotal');
+            const shippingEl = document.getElementById('orderShipping');
+
+            if (cart.length === 0) {
+                checkoutItemsContainer.innerHTML = '<p class="empty-cart-message">Your cart is empty. <a href="index.html">Continue Shopping</a></p>';
+                return;
+            }
+
+            let subtotal = 0;
+            checkoutItemsContainer.innerHTML = cart.map(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                return `
+                    <div class="checkout-item">
+                        <img src="${item.   }" alt="${item.name}" class="checkout-item-image">
+                        <div class="checkout-item-details">
+                            <h4>${item.name}</h4>
+                            <p>Quantity: ${item.quantity}</p>
+                        </div>
+                        <span class="checkout-item-price">$${itemTotal.toFixed(2)}</span>
+                    </div>
+                `;
+            }).join('');
+
+            const shipping = 10.00;
+            const tax = subtotal * 0.1;
+            const total = subtotal + shipping + tax;
+
+            orderSubtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+            orderTaxEl.textContent = `$${tax.toFixed(2)}`;
+            orderTotalEl.textContent = `$${total.toFixed(2)}`;
+
+            // Payment method toggle
+            const paymentRadios = document.querySelectorAll('.payment-radio');
+            const cardDetails = document.getElementById('cardDetails');
+
+            paymentRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'credit') {
+                        cardDetails.style.display = 'block';
+                    } else {
+                        cardDetails.style.display = 'none';
+                    }
+                });
+            });
+
+            // Place order button
+            const placeOrderBtn = document.getElementById('placeOrderBtn');
+            placeOrderBtn.addEventListener('click', function() {
+                this.classList.add('loading');
+                this.disabled = true;
+
+                setTimeout(() => {
+                    if (typeof showToast === 'function') {
+                        showToast('Order placed successfully!', 'success');
+                    }
+                    localStorage.removeItem('cart');
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 2000);
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
+
