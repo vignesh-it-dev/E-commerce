@@ -14,7 +14,7 @@ This is a front-end e-commerce website project.
 - Animations
 
 ## 🚀 Live Demo
-(After GitHub Pages enable pannina link inga podu)
+https://vignesh-it-dev.github.io/E-commerce/
 
 ## 📸 Screenshots
 (Add screenshots here)
